@@ -1,0 +1,14 @@
+nav {
+  background-color: #1e71a2;
+}
+
+nav > h1 {
+  color: #fff;
+}
+
+.list {
+  width: 100%;
+  margin: 0 !important;
+  border-top: none !important; 
+  border-bottom: none !important; 
+}
