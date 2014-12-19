@@ -22,10 +22,14 @@
       "<h2>Hauptmen&uuml;</h2><img src='assets/img/tutorial/Design_Concept_K01_2_Tutorial_Hauptmenue.svg'><p>Die L&auml;den findest du aufgelistet, in deinem Hauptmen&uuml; wieder.</p>",
       "<h2>Nachrichten</h2><img src='assets/img/tutorial/Design_Concept_K01_3_Tutorial_Nachrichten.svg'><p>Neueste Nachrichten erscheinen in deinem Hauptmen&uuml; an oberster Stelle.</p>",
       "<h2>Kontakt</h2><img src='assets/img/tutorial/Design_Concept_K01_4_Tutorial_Kontakt.svg'><p>Mit Hilfe der Quicklinks hast du Zugriff auf alle weiteren Informationen zum Laden.</p>",
+            "<button class='lets-go'>Los geht's</button>",
       ];
 
     $(function() {
       $.UISetupCarousel({ target: '#carousel', panels: panels, loop: false, pagination: true });
+      $('#carousel').on('singletap', '.lets-go', function() {
+        window.location.href = 'shop_list.html';
+      });
     });
   </script>
 </head>
