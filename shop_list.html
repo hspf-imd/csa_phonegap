@@ -15,93 +15,71 @@
   <script src="chui/chui-3.8.0.js"></script>
   <script src="assets/js/main.js"></script>
   
+     <script id='shopListTemplate' type='text/x-template'>
+        <li class='comp'>
+          <aside>
+           <img title='[[= data.name ]]' src="[[= data.imgSrc ]]" height="80px">
+          </aside>
+          <div>
+            <h3>[[= data.name ]]</h3>
+            <p>[[= data.street ]] <br> 
+               [[= data.city ]]</p>
+          </div>
+        </li>
+     </script>  
+  
+   <script>
+     
+      
+    
+      $(function() {
+      var shops = [
+                  {"name" : "Hornbach",
+                   "imgSrc" : "assets/img/logos/00_icon_hornbach.png",
+                   "street" : "Schwenninger Straße 4",
+                   "city" : "75179 Pforzheim"},
+        
+                  {"name" : "Feinbäckerei Otto",
+                   "imgSrc" : "assets/img/logos/01_icon_baeckerei.png",
+                   "street" : "Schulstraße 26",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"name" : "Deutsche Apotheke",
+                   "imgSrc" : "assets/img/logos/02_icon_apotheke.png",
+                   "street" : "Zerrennerstraße 9",
+                   "city" : "75172 Pforzheim"},
+        
+                  {"name" : "Apollo Optik",
+                   "imgSrc" : "assets/img/logos/03_icon_optiker.png",
+                   "street" : "Bahnhofstraße 2",
+                   "city" : "75172 Pforzheim"},
+        
+                  {"name" : "Revo Print",
+                   "imgSrc" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+      ];
+        
+        var shopTemplateString = $('#shopListTemplate').text();
+        var shopTemplate = $.template(shopTemplateString);
+        
+        var element1 = shopTempate(shops[0]);
+        shops.forEach(function(shop){
+          $('#main .list').append(shopTempate(shop));
+        });
+      });
+   </script>
+  
+  
 </head>
 <body>
   <nav>
     <h1>Hauptmenü</h1>
-  </nav>
+  </nav> 
     <article id='main'>
-      <ul class='list'>
-        <li class='comp'>
-          <aside>
-           <img title='Hornbach' src="assets/img/logos/00_icon_hornbach.png" height="80px">
-          </aside>
-          <div>
-            <h3>Hornbach</h3>
-            <p>Schwenninger Strasse 4 <br> 
-               75179 Pforzheim</p>
-          </div>
-        </li>
-        <li class='comp'>
-          <aside>
-            <img title='Bäckerei' src="assets/img/logos/01_icon_baeckerei.png" height="80px">
-          </aside>
-          <div>
-            <h3>Feinbäckerei Otto</h3>
-            <p>Schulstraße 26 <br>
-               75173 Pforzheim</p>
-          </div>
-        </li>
-        <li class='comp'>
-          <aside>
-            <img title='Apotheke' src="assets/img/logos/02_icon_apotheke.png" height="80px">
-          </aside>
-          <div>
-            <h3>Deutsche Apotheke</h3>
-            <p>Zerrennerstraße 9 <br>
-               75172 Pforzheim</p>
-          </div>
-        </li>
-        <li class='comp'>
-          <aside>
-            <img title='Optiker' src="assets/img/logos/03_icon_optiker.png" height="80px">
-          </aside>
-          <div>
-            <h3>Apollo Optik</h3>
-            <p>Bahnhofstraße 2 <br>
-               75172 Pforzheim</p>
-          </div>
-        </li>
-        <li class='comp'>
-          <aside>
-            <img title='RevoPrint' src="assets/img/logos/04_icon_print.png" height="80px">
-          </aside>
-          <div>
-            <h3>Revo Print</h3>
-            <p>Max-Planck-Straße 39 <br>
-               75173 Pforzheim</p>
-          </div>
-        </li>
-        <li class='comp'>
-          <aside>
-            <img title='Holder' src="assets/img/logos/05_icon_placeholder.png" height="80px">
-          </aside>
-          <div>
-            <h3>Shopname</h3>
-            <p>Adresseninformation 1 <br>
-               Adresseninformation 2</p>
-          </div>
-        </li>
-         <li class='comp'>
-          <aside>
-            <img title='Holder' src="assets/img/logos/05_icon_placeholder.png" height="80px">
-          </aside>
-          <div>
-            <h3>Shopname</h3>
-            <p>Adresseninformation 1 <br>
-               Adresseninformation 2</p>
-          </div>
-        </li>
-         <li class='comp'>
-          <aside>
-            <img title='Holder' src="assets/img/logos/05_icon_placeholder.png" height="80px">
-          </aside>
-          <div>
-            <h3>Shopname</h3>
-            <p>Adresseninformation 1 <br>
-               Adresseninformation 2</p>
-          </div>
-        </li>
+      <ul class='list'>   
+    
+       
       </ul>        
   </article>
 </body>
