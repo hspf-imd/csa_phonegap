@@ -63,9 +63,8 @@
         var shopTemplateString = $('#shopListTemplate').text();
         var shopTemplate = $.template(shopTemplateString);
         
-        var element1 = shopTempate(shops[0]);
         shops.forEach(function(shop){
-          $('#main .list').append(shopTempate(shop));
+          $('#main .list').append(shopTemplate(shop));
         });
       });
    </script>
