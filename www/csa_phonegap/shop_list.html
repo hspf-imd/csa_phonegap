@@ -18,10 +18,10 @@
      <script id='shopListTemplate' type='text/x-template'>
         <li class='comp' data-id='[[= data.id ]]'>
           <aside>
-           <img title='[[= data.name ]]' src="[[= data.imgSrc ]]" height="80px">
+           <img title='[[= data.nameCompany ]]' src='[[= data.imgPathCompany ]]' height="80px">
           </aside>
           <div>
-            <h3>[[= data.name ]]</h3>
+            <h3>[[= data.nameCompany ]]</h3>
             <p>[[= data.street ]] <br> 
                [[= data.city ]]</p>
           </div>
@@ -34,28 +34,93 @@
     
       $(function() {
       var shops = [
-                  {"name" : "Hornbach",
-                   "imgSrc" : "assets/img/logos/00_icon_hornbach.png",
+                  {"nameCompany" : "Hornbach",
+                   "imgPathCompany" : "assets/img/logos/00_icon_hornbach.png",
                    "street" : "Schwenninger Straße 4",
                    "city" : "75179 Pforzheim"},
         
-                  {"name" : "Feinbäckerei Otto",
-                   "imgSrc" : "assets/img/logos/01_icon_baeckerei.png",
+                  {"nameCompany" : "Feinbäckerei Otto",
+                   "imgPathCompany" : "assets/img/logos/01_icon_baeckerei.png",
                    "street" : "Schulstraße 26",
                    "city" : "75173 Pforzheim"},
         
-                  {"name" : "Deutsche Apotheke",
-                   "imgSrc" : "assets/img/logos/02_icon_apotheke.png",
+                  {"nameCompany" : "Deutsche Apotheke",
+                   "imgPathCompany" : "assets/img/logos/02_icon_apotheke.png",
                    "street" : "Zerrennerstraße 9",
                    "city" : "75172 Pforzheim"},
         
-                  {"name" : "Apollo Optik",
-                   "imgSrc" : "assets/img/logos/03_icon_optiker.png",
+                  {"nameCompany" : "Apollo Optik",
+                   "imgPathCompany" : "assets/img/logos/03_icon_optiker.png",
                    "street" : "Bahnhofstraße 2",
                    "city" : "75172 Pforzheim"},
         
-                  {"name" : "Revo Print",
-                   "imgSrc" : "assets/img/logos/04_icon_print.png",
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
                    "street" : "Max-Planck-Straße 39",
                    "city" : "75173 Pforzheim"},
       ];
@@ -68,7 +133,7 @@
           $('#main .list').append(shopTemplate(shop));
         });
      
-       $('li.comp').on('singletap', function() {
+       $('li.comp').on('click', function() {
          window.location.href = "shop_message.html#" + $(this).data('id');
        });
       });
@@ -80,11 +145,20 @@
   <nav>
     <h1>Hauptmenü</h1>
   </nav> 
-    <article id='main'>
-      <ul class='list'>   
+
+  <article id='main'>
     
-       
-      </ul>        
+    <ul class='list'/>
+
+    <div class="scan">
+
+      <img src="assets/img/icon_camerabutton.svg" onclick="alert('Barcodescanner');">
+
+      <p>
+        Drücke auf das Plussymbol, um einen Shop zu scannen
+      </p>
+
+    </div>
   </article>
 </body>
 </html>

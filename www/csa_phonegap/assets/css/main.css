@@ -12,3 +12,17 @@ nav > h1 {
   border-top: none !important; 
   border-bottom: none !important; 
 }
+
+.scan {
+	background-color: #1e71a2; 
+	width: 100%;
+	color:white; 
+	padding:20px; 
+	display:table-cell; 
+	vertical-align:middle; 
+	text-align:center;"
+}
+
+.scan > p {
+	text-align: justify;
+}
