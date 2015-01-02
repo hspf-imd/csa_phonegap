@@ -16,7 +16,7 @@
   <script src="assets/js/main.js"></script>
   
      <script id='shopListTemplate' type='text/x-template'>
-        <li class='comp'>
+        <li class='comp' data-id='[[= data.id ]]'>
           <aside>
            <img title='[[= data.name ]]' src="[[= data.imgSrc ]]" height="80px">
           </aside>
@@ -63,9 +63,14 @@
         var shopTemplateString = $('#shopListTemplate').text();
         var shopTemplate = $.template(shopTemplateString);
         
-        shops.forEach(function(shop){
+        shops.forEach(function(shop, index){
+          shop['id'] = index;
           $('#main .list').append(shopTemplate(shop));
         });
+     
+       $('li.comp').on('singletap', function() {
+         window.location.href = "shop_message.html#" + $(this).data('id');
+       });
       });
    </script>
   
