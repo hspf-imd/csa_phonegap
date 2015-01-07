@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 width="154.286px" height="152.857px" viewBox="0 0 154.286 152.857" enable-background="new 0 0 154.286 152.857"
+	 xml:space="preserve">
+<g id="Ebene_10" display="none">
+	<rect x="-343.857" y="-1082.376" display="inline" fill="#474747" width="842.944" height="1398.982"/>
+</g>
+<g id="Background_1_" display="none">
+	<polyline display="inline" fill="#2471A3" points="398.143,205 -241.857,205 -241.857,-931 398.143,-931 	"/>
+</g>
+<g id="Navigation_Bar_1" display="none">
+</g>
+<g id="Status_Bar" display="none">
+</g>
+<g id="Hauptmenü">
+	<path fill="none" stroke="#FFFFFF" stroke-width="6" stroke-miterlimit="10" d="M141.11,76.398
+		c0,34.76-28.176,62.935-62.936,62.935c-34.757,0-62.933-28.175-62.933-62.935c0-34.755,28.176-62.934,62.933-62.934
+		C112.934,13.465,141.11,41.644,141.11,76.398"/>
+	<polyline fill="#FFFFFF" points="43.558,79.75 74.827,79.75 74.827,111.016 81.527,111.016 81.527,79.75 112.793,79.75 
+		112.793,73.047 81.527,73.047 81.527,41.781 74.827,41.781 74.827,73.047 43.558,73.047 	"/>
+</g>
+<g id="Hauptmenü_Text" display="none">
+	<rect x="-241.792" y="118.558" display="inline" fill="none" width="639.935" height="135.213"/>
+	
+		<text transform="matrix(1 0 0 1 -195.3599 182.8477)" display="inline" fill="#FDFDFD" font-family="'Roboto-Light'" font-size="25">Drücke auf das Plussymbol, um Shop zu scannen.</text>
+</g>
+</svg>

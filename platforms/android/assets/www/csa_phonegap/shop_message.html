@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="msapplication-tap-highlight" content="no">
+  <title>ChocolateChip-UI iOS</title>
+  
+  <link rel="stylesheet" href="chui/chui-android-3.8.0.css">
+  <link rel="stylesheet" href="assets/css/message.css">
+  
+  <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+  <script src="chui/chui-3.8.0.js"></script>
+
+  <script id='shopTemplate' type='text/x-template'>
+        <li class='comp' data-id='[[= data.id ]]'>
+          <aside>
+            <img title='[[= data.nameCompany ]]' src='[[= data.imgPathCompany ]]' height="80px">
+          </aside>
+          <div>
+            <h3>[[= data.nameCompany ]]</h3>
+            <p>[[= data.street ]] <br>
+               [[= data.city ]]</p>
+          </div>
+        </li>
+        <li>
+          <div>
+            <h3 class='slogan'>[[= data.slogan ]]</h3>
+          </div>
+        </li>
+        <li>
+          <div class='quicklink'>
+            <img title='phone' src="assets/img/message/quick_icon_phone.png">
+            <img title='mail' src="assets/img/message/quick_icon_mail.png">
+            <img title='web' src="assets/img/message/quick_icon_web.png">
+            <img title='nav' src="assets/img/message/quick_icon_nav.png">
+          </div>
+        </li>
+        <li class='nachricht'>
+          <img title='mitarbeiter' src='[[= data.imgPathContact ]]'>
+          <div>
+            <h3>Ihr Druckauftrag für 500 Flyer liegen zur Abholung bereit.<br>
+            Grüße, Herr Schneider</h3>
+          </div>
+        </li>
+
+        <li class='altenachricht'>
+          <div>
+            <h5>&Aumlltere Nachrichten anzeigen</h5>
+          </div>
+    </li>
+
+     </script>  
+
+
+  <script>
+    $(function() {
+      var id = window.location.hash.substring(1);
+
+      var shops = [
+                  {"nameCompany" : "Hornbach",
+                   "imgPathCompany" : "assets/img/logos/00_icon_hornbach.png",
+                   "street" : "Schwenninger Straße 4",
+                   "city" : "75179 Pforzheim"},
+        
+                  {"nameCompany" : "Feinbäckerei Otto",
+                   "imgPathCompany" : "assets/img/logos/01_icon_baeckerei.png",
+                   "street" : "Schulstraße 26",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Deutsche Apotheke",
+                   "imgPathCompany" : "assets/img/logos/02_icon_apotheke.png",
+                   "street" : "Zerrennerstraße 9",
+                   "city" : "75172 Pforzheim"},
+        
+                  {"nameCompany" : "Apollo Optik",
+                   "imgPathCompany" : "assets/img/logos/03_icon_optiker.png",
+                   "street" : "Bahnhofstraße 2",
+                   "city" : "75172 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+        
+                  {"nameCompany" : "Revo Print",
+                   "imgPathCompany" : "assets/img/logos/04_icon_print.png",
+                   "street" : "Max-Planck-Straße 39",
+                   "city" : "75173 Pforzheim"},
+      ];
+        
+      var shopTemplateString = $('#shopTemplate').text();
+      var shopTemplate = $.template(shopTemplateString);
+        
+      $('#main .list').append(shopTemplate(shops[id]));
+
+    });
+  </script>
+ 
+</head>
+<body>
+  <nav>
+    <h1>Shop</h1>
+  </nav>
+  <article id='main'>
+    <ul class='list'/>
+  </article>
+</body>
+</html>

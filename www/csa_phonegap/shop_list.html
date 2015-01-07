@@ -14,6 +14,8 @@
   <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
   <script src="chui/chui-3.8.0.js"></script>
   <script src="assets/js/main.js"></script>
+          <script type="text/javascript" src="../cordova.js"></script>
+        <script type="text/javascript" src="../js/index.js"></script>
   
      <script id='shopListTemplate' type='text/x-template'>
         <li class='comp' data-id='[[= data.id ]]'>
@@ -136,6 +138,9 @@
        $('li.comp').on('click', function() {
          window.location.href = "shop_message.html#" + $(this).data('id');
        });
+       $('.scan *').on('click', function() {
+         app.scan();
+       });
       });
    </script>
   
@@ -152,7 +157,7 @@
 
     <div class="scan">
 
-      <img src="assets/img/icon_camerabutton.svg" onclick="alert('Barcodescanner');">
+      <img src="assets/img/icon_camerabutton.svg">
 
       <p>
         Drücke auf das Plussymbol, um einen Shop zu scannen
