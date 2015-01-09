@@ -1,14 +1,38 @@
-nav {
-  background-color: #1e71a2;
-}
-
-nav > h1 {
-  color: #fff;
-}
-
 .list {
   width: 100%;
-  margin: 0 !important;
+  margin: 0 0 7em 0 !important;
   border-top: none !important; 
   border-bottom: none !important; 
+}
+
+
+.scan {
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #1e71a2; 
+	width: 100%;
+	color:white; 
+	
+	height: 7em;
+	display: table;
+}
+
+.scan > * {
+	float: left;
+}
+
+.scan img {
+	height: 80%;
+	display: table-cell;
+	padding: 0.7em 1.5em 0.7em 10%;
+	vertical-align: middle;
+}
+
+.scan > p {
+	height: 80%;
+	display: table-cell;
+	padding: 1em 1.5em;
+	vertical-align: middle;
 }
